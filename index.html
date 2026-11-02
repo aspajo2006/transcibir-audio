@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f1eb">
+  <meta name="description" content="Transcribe archivos de audio con Whisper directamente en tu navegador.">
+  <title>Voz a texto — Transcriptor Whisper</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <main class="layout">
+    <header class="topbar"><a class="brand" href="#" aria-label="Voz a texto, inicio"><span class="brand-mark">V</span><span>voz<span class="brand-light">/</span>texto</span></a><span class="privacy"><span class="privacy-dot"></span> Procesamiento privado en tu navegador</span></header>
+    <section class="hero">
+      <p class="eyebrow">TRANSCRIPTOR DE AUDIO · MANFLER</p>
+      <h1>Tus palabras,<br><em>por escrito.</em></h1>
+      <p class="intro">Convierte una grabación en texto. El audio se procesa en tu dispositivo y no se sube a ningún servidor.</p>
+    </section>
+    <section class="workspace" aria-label="Transcripción">
+      <label class="dropzone" id="dropzone" for="audio-file" tabindex="0">
+        <input id="audio-file" type="file" accept="audio/*,.mp3,.wav,.m4a,.ogg,.flac,.aac,.wma,.mpeg">
+        <span class="upload-icon" aria-hidden="true">↑</span>
+        <span class="drop-title" id="file-title">Elige un archivo de audio</span>
+        <span class="drop-hint" id="file-hint">o arrástralo aquí · MP3, WAV, M4A, OGG, FLAC, MPEG</span>
+        <span class="browse">Seleccionar archivo</span>
+      </label>
+      <div class="controls">
+        <label class="select-wrap" for="model"><span>MODELO</span><select id="model"><option value="Xenova/whisper-base">Base · equilibrado</option><option value="Xenova/whisper-small">Small · más preciso, más lento</option><option value="Xenova/whisper-tiny">Tiny · más rápido</option></select></label>
+        <button class="transcribe" id="transcribe" disabled><span>Transcribir audio</span><span aria-hidden="true">↗</span></button>
+      </div>
+      <div class="status" id="status" role="status" aria-live="polite"><span class="status-dot"></span><span id="status-text">Selecciona un archivo para comenzar.</span></div>
+      <div class="progress-track" id="progress-track" hidden><div class="progress-bar" id="progress-bar"></div></div>
+      <div class="result-head"><div><p class="eyebrow">RESULTADO</p><h2>Transcripción</h2></div><div class="result-actions"><button id="copy" class="quiet-button" disabled>Copiar</button><button id="download" class="quiet-button" disabled>Descargar .txt</button></div></div>
+      <div class="result-box"><textarea id="result" placeholder="Tu transcripción aparecerá aquí…" aria-label="Texto transcrito"></textarea><div class="result-meta" id="result-meta"></div></div>
+    </section>
+    <footer><span>Hecho para transcribir, sin complicaciones.</span><span>hecho por MANFLER</span></footer>
+  </main>
+</body>
+</html>
+
