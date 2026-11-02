@@ -26,12 +26,4 @@ Luego abre <http://localhost:8000>.
 
 La primera vez se necesita conexión a Internet para cargar Transformers.js y descargar el modelo elegido desde Hugging Face. Los modelos se guardan en la caché del navegador; los modelos más grandes pueden tardar más y requieren más memoria.
 
-## Publicar en GitHub Pages
 
-1. Sube `index.html`, `style.css`, `app.js` y `README.md` a la raíz de un repositorio de GitHub.
-2. En el repositorio, abre **Settings → Pages**.
-3. En **Build and deployment**, selecciona **Deploy from a branch**.
-4. Elige la rama `main` y la carpeta `/ (root)`, y guarda.
-5. Al finalizar el despliegue, GitHub mostrará el enlace público del sitio en la sección **Pages**.
-
-GitHub Pages publica el sitio con HTTPS, necesario para que las funciones del navegador trabajen correctamente.
